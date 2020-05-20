@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "82cda1a7-2be7-43fa-acf1-30caf4945a89",
+		"name": "pact-pharma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "publish_msg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/send/bar/baz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"send",
+						"bar",
+						"baz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish_Clinical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/send/clinical/pleasanton",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"send",
+						"clinical",
+						"pleasanton"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish_default",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/send/unknown/xxx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"send",
+						"unknown",
+						"xxx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish_Lab",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/send/lab/1-011",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"send",
+						"lab",
+						"1-011"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

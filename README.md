@@ -11,15 +11,17 @@ The `MultiMethods` `@KafkaListener` has 3 methods; one for each of the known obj
 Run the application and use curl to send some data:
 
 ``` sh
-$ curl -X POST http://localhost:8080/send/lab/id
-$ curl -X POST http://localhost:8080/send/clinical/source
+$ curl -X POST http://localhost:8080/send/clinical/pleasanton
+$ curl -X POST http://localhost:8080/send/lab/1-011
 $ curl -X POST http://localhost:8080/send/unknown/xxx
 ```
 
 Console output:
 
 ``` sh
-Received: Foo2 [foo=bar]
-Received: Bar2 [bar=baz]
+Received: Clinical2 [source=pleasanton]
+Received: Lab2 [id=1-011]
 Received unknown: xxx
 ```
+
+Find the [API documentation](docs/pact-pharma.postman_collection.json) in postman collection.
