@@ -5,7 +5,7 @@
 
 	<groupId>com.pactpharma</groupId>
 	<artifactId>poc-kafka-01</artifactId>
-	<version>0.0.1.SNAPSHOT</version>
+	<version>0.0.2.SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>poc-kafka-01</name>
@@ -31,7 +31,10 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -46,6 +49,13 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -92,10 +102,10 @@
 							<enricher>
 								<config>
 									<fmp-controller>
-										<name>poc-kafka-01</name>
+										<name>poc-kafka-02</name>
 									</fmp-controller>
 									<fmp-service>
-										<name>poc-kafka-01</name>
+										<name>poc-kafka-02</name>
 										<type>NodePort</type>
 									</fmp-service>
 								</config>

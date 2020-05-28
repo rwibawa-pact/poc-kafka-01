@@ -1,7 +1,26 @@
 spring:
   kafka:
-    bootstrap-servers: 10.105.23.11:9092
+    bootstrap-servers: b-2.testkafkacluster.9dcn4a.c3.kafka.us-west-2.amazonaws.com:9092
     producer:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.type.mapping: lab:com.pactpharma.poc.model.Lab1,clinical:com.pactpharma.poc.model.Clinical1
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:6603}/${MYSQL_DB:pact}
+    username: ${PACT_DB_USERNAME:dev}
+    password: ${PACT_DB_PASSWORD:hello#}
+    initialize: true
+    continueOnError: false
+    initialSize: 0
+    timeBetweenEvictionRunsMillis: 500
+    minEvictableIdleTimeMillis: 5000
+    minIdle: 0
+    validation-query: select 1
+    test-on-borrow: true
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update

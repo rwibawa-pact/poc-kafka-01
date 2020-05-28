@@ -1,32 +1,25 @@
 package com.pactpharma.poc.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author Ryan Wibawa
  * @since 0.0.1
  *
  */
+@Entity
+@Data
+@NoArgsConstructor
 public class Lab2 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	private String id;
-
-	public Lab2() {
-	}
-
-	public Lab2(String id) {
-		this.id = id;
-	}
-
-	public String getId() {
-		return this.id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	@Override
-	public String toString() {
-		return "Lab2 [id=" + this.id + "]";
-	}
-
+	private String location;
 }

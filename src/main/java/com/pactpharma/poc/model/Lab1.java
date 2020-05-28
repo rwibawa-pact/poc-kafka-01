@@ -9,5 +9,5 @@ import lombok.Value;
  */
 @Value
 public class Lab1 {
-	public String id;
+	public String location;
 }
